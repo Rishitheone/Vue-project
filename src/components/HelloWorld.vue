@@ -1,58 +1,111 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+<div class="hello">
+    <div class="menu">
+        <div class="menu-item">
+            <div class="menu-text">
+                Resume
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-text">
+                Skating
+            </div>
+        </div>
+        <div class="menu-item menu-center">
+            Kylie Ying
+        </div>
+        <div class="menu-item">
+            <div class="menu-text">
+                YouTube
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-text">
+                About
+            </div>
+        </div>
+    </div>
+    <div class="name">
+        <div class="letter">
+            <img src="../assets/img/K.png" class="letter-image">
+        </div>
+        <div class="letter">
+            <img src="../assets/img/Y.png" class="letter-image">
+        </div>
+        <div class="letter">
+            <img src="../assets/img/L.png" class="letter-image">
+        </div>
+        <div class="letter">
+            <img src="../assets/img/I.png" class="letter-image">
+        </div>
+        <div class="letter">
+            <img src="../assets/img/E.png" class="letter-image">
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+    name: 'Home',
+    props: {
+        msg: String
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 100vw;
+    height: calc(100vh - 60px);
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.letter {
+    margin: .8%;
+    filter: drop-shadow(0px 0px 7px rgba(150, 150, 150, .7));
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.letter-image {
+    width: 100%;
 }
-a {
-  color: #42b983;
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    height: 60px;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-text {
+    font-size: 20px;
+    color: #818181;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 2px solid #080808;
+    width: fit-content;
+}
+
+.menu-text:hover {
+    border-bottom: 2px solid #c278ff;
+}
+
+.menu-center {
+    font-size: 36px;
+    color: #EAEAEA;
 }
 </style>
